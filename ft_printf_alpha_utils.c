@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 18:25:08 by samartin          #+#    #+#             */
-/*   Updated: 2022/11/23 18:25:30 by samartin         ###   ########.fr       */
+/*   Updated: 2022/11/25 14:32:45 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ unsigned int	pf_putstr(char *str)
 			count += write (1, str, 1);
 			str++;
 		}
+	}
+	else
+	{
+		write(1, "(null)", 6);
+		count = 6;
 	}
 	return (count);
 }
